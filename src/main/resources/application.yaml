@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: eureka_server
+server:
+  port: 8090
+  servlet:
+    context-path: /eureka-server/api/v1
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8090/eureka-server/
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: false   # disables the warning in development
+    eviction-interval-timer-in-ms: 5000
