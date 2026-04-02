@@ -3,8 +3,6 @@ spring:
     name: eureka_server
 server:
   port: 8090
-  servlet:
-    context-path: /eureka-server/api/v1
 
 
 eureka:
@@ -12,7 +10,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8090/eureka-server/api/v1/eureka/
+      defaultZone: http://localhost:8090/eureka
   instance:
     hostname: localhost
   server:
